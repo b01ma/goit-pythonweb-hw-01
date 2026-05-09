@@ -113,6 +113,20 @@ Enter command (add, remove, show, exit): show
 Title: Clean Code, Author: Robert C. Martin, Year: 2008
 ```
 
+## Recent fixes
+
+After review, the following improvements were added to finalize the submission:
+
+- `task_1.py` now includes an executable `main()` function with a concrete
+	factory usage demo (US and EU factories, object creation, engine start calls).
+- `task_1.py` now configures logging via
+	`logging.basicConfig(level=logging.INFO, format="%(message)s")` to guarantee
+	visible console output when the file is run directly.
+- `task_2.py` was adjusted so that `LibraryInterface` is a pure interface
+	(method contract only) and no longer stores `books` state.
+- `task_2.py` keeps state in `Library`, which is the correct concrete
+	implementation for in-memory storage.
+
 ## Code quality requirements
 
 The submitted solution follows the assignment rules in the following way:

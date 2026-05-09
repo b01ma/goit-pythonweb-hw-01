@@ -15,9 +15,6 @@ class Book:
 
 
 class LibraryInterface(ABC):
-    def __init__(self) -> None:
-        self.books: list[Book] = []
-
     @abstractmethod
     def add_book(self, book: Book) -> None:
         raise NotImplementedError
@@ -33,7 +30,7 @@ class LibraryInterface(ABC):
 
 class Library(LibraryInterface):
     def __init__(self) -> None:
-        super().__init__()
+        self.books: list[Book] = []
 
     def add_book(self, book: Book) -> None:
         self.books.append(book)
